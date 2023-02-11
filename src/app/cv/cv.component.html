@@ -3,6 +3,13 @@
     <img src="{{ photo }}" />
     <a href="tel:{{ phone }}">{{ phone }}</a>
     <a href="mailto:{{ email }}">{{ email }}</a>
+    <div [ngClass]="'social-media'">
+        <div *ngFor="let media of social">
+          <a href="{{ media.link }}" target="_blank">
+            <img src="{{ media.icon }}" />
+          </a>
+        </div>
+    </div>
   </div>
   <div [ngClass]="'main-panel'">
     <div [ngClass]="'personal-info'">

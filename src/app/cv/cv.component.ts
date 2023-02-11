@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SocialMedia } from '../SocialMedia';
 
 @Component({
   selector: 'app-cv',
@@ -16,4 +17,11 @@ export class CVComponent {
   education: string = "NAU. Software Engineering";
   languages: string[] = ["English: B2", "Ukrainian: native", "Russian: native"];
   photo: string = "https://www.w3schools.com/howto/img_avatar.png";
+  social: SocialMedia[] = [
+    new SocialMedia("../assets/images/facebook.png", "https://www.facebook.com/"),
+    new SocialMedia("../assets/images/twitter.png", "https://twitter.com/"),
+    new SocialMedia("../assets/images/linkedin.png", "https://www.linkedin.com/"),
+    new SocialMedia("../assets/images/instagram.png", "https://www.instagram.com/"),
+    new SocialMedia("../assets/images/github.png", "https://github.com/zlojKolhoznik")
+  ];
 }

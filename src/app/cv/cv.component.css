@@ -44,3 +44,13 @@
 .main-panel ul {
     list-style-position: inside;
 }
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0;
+}
+.social-media img {
+    width: 48px;
+    height: 48px;
+}
