@@ -1,33 +1,36 @@
-<div class="wrapper">
-    <div class="side-panel">
-        <img src="{{photo}}">
-        <a href="tel:{{phone}}">{{phone}}</a>
-        <a href="mailto:{{email}}">{{email}}</a>
+<div [ngClass]="'wrapper'">
+  <div [ngClass]="'side-panel'">
+    <img src="{{ photo }}" />
+    <a href="tel:{{ phone }}">{{ phone }}</a>
+    <a href="mailto:{{ email }}">{{ email }}</a>
+  </div>
+  <div [ngClass]="'main-panel'">
+    <div [ngClass]="'personal-info'">
+      <h1>{{ name }}</h1>
+      <h2>{{ position }}</h2>
+      <h3>{{ address }}</h3>
     </div>
-    <div class="main-panel">
-        <div class="personal-info">
-            <h1>{{name}}</h1>
-            <h2>{{position}}</h2>
-            <h3>{{address}}</h3>
-        </div>
-        <div class="education"><h2>Education: </h2>{{education}}</div>
-        <div class="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li *ngFor="let skill of skills">{{skill}}</li>
-            </ul>
-        </div>
-        <div class="languages">
-            <h2>Languages</h2>
-            <ul>
-                <li *ngFor="let lang of languages">{{lang}}</li>
-            </ul>
-        </div>
-        <div class="experience">
-            <h2>Experience</h2>
-            <ul>
-                <li *ngFor="let exp of experience">{{exp}}</li>
-            </ul>
-        </div>
+    <div [ngClass]="'education'">
+      <h2 [ngStyle]="{'font-size': '40px'}">Education</h2>
+      {{ education | uppercase }}
     </div>
+    <div [ngClass]="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li *ngFor="let skill of skills">{{ skill | titlecase }}</li>
+      </ul>
+    </div>
+    <div [ngClass]="'languages'">
+      <h2>Languages</h2>
+      <ul>
+        <li *ngFor="let lang of languages">{{ lang | titlecase }}</li>
+      </ul>
+    </div>
+    <div [ngClass]="'experience'">
+      <h2>Experience</h2>
+      <ul>
+        <li *ngFor="let exp of experience">{{ exp }}</li>
+      </ul>
+    </div>
+  </div>
 </div>
