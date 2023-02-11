@@ -41,3 +41,6 @@
 .main-panel h3{
     font-size: 1.2em;
 }
+.main-panel ul {
+    list-style-position: inside;
+}
